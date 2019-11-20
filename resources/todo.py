@@ -37,3 +37,14 @@ class Todo(Resource):
         if todo:
             todo.delete_from_db()
         return {"message": "Todo deleted"}
+    
+    def put(self, title):
+        data = Todo.parser.parse_args()
+        todo = TodoModel.find_by_title(title)
+
+        if todo is None:
+            todo = TodoModel(title, **data)
+        else:
+            todo.content = data['content']
+        todo.save_to_db()
+        return todo.json()
