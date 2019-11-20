@@ -19,3 +19,7 @@ class TodoModel(db.Model):
     @classmethod
     def find_by_title(cls, title):
         return cls.query.filter_by(title=title).first()
+
+    def save_to_db(self):
+        db.session.add(self)
+        db.session.commit()
