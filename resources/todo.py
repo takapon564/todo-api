@@ -31,3 +31,9 @@ class Todo(Resource):
             return {"message": "An error occurred inserting the todo."}, 500
 
         return todo.json(), 201
+
+    def delete(self, title):
+        todo = TodoModel.find_by_title(title)
+        if todo:
+            todo.delete_from_db()
+        return {"message": "Todo deleted"}
