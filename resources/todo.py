@@ -48,3 +48,7 @@ class Todo(Resource):
             todo.content = data['content']
         todo.save_to_db()
         return todo.json()
+
+class TodoList(Resource):
+    def get(self):
+        return {'todos': list(map(lambda x: x.json(), TodoModel.query.all()))}

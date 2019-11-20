@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_restful import Resource, Api
-from resources.todo import Todo
+from resources.todo import Todo, TodoList
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
@@ -9,6 +9,7 @@ api = Api(app)
 
 
 api.add_resource(Todo, '/todo/<string:title>')
+api.add_resource(TodoList, '/todos')
 
 if __name__ == "__main__":
     from db import db
