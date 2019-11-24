@@ -6,7 +6,7 @@ FORMAT: 1A
  
 ### GET a todo task [GET]
  
-#### 処理概要
+#### Description
  
 * Get a todo task
  
@@ -124,5 +124,5 @@ FORMAT: 1A
             ]
         }
 
----
+
 
