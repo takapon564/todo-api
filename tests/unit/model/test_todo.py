@@ -1,8 +1,8 @@
-import unittest
+from tests.base_test import BaseTest
 
 from  models.todo import TodoModel
 
-class TodoTest(unittest.TestCase):
+class TodoTest(BaseTest):
 
     def test_todoのインスタンスが作成されること(self):
         todo = TodoModel('task1', 'walking')
