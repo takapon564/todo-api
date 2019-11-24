@@ -1,6 +1,6 @@
 import unittest
 from unittest import TestCase
-from app import app
+from local_setup import app
 from db import db
 
 
