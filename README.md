@@ -22,4 +22,4 @@ $ python3 local_seup.py
 ```  
 
 ## System Architecture
-
+![](./picture/system.jpg)
