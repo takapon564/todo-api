@@ -9,7 +9,7 @@ phases:
   build:
     commands:
       - python3 -m unittest tests.unit.model.test_todo
-      - python3 -m unittest test.integration.test_todo
+      - python3 -m unittest tests.integration.model.test_todo
 artifacts:
   files:
     - production_setup.py
