@@ -15,5 +15,3 @@ artifacts:
     - production_setup.py
     - models
     - resources
-  base-directory: ./
-  name: code.zip
