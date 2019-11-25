@@ -8,7 +8,7 @@ phases:
       - pip3 install flask flask-restful flask-sqlalchemy
   build:
     commands:
-      - python3 -m unittest tests.unit.model.test_item
+      - python3 -m unittest tests.unit.model.test_todo
 artifacts:
   files:
     - '**/*'
