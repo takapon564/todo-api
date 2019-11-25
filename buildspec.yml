@@ -12,6 +12,6 @@ phases:
       - python3 -m unittest tests.integration.model.test_todo
 artifacts:
   files:
-    - production_setup.py
-    - models
-    - resources
+    - ./production_setup.py
+    - ./models/**
+    - ./resources/**
