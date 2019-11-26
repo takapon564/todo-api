@@ -5,7 +5,7 @@ from flask_restful import Resource, Api
 from resources.todo import Todo, TodoList
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:password@10.0.30.6/test'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:password@10.0.30.61/test'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 api = Api(app)
 
