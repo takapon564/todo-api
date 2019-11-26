@@ -24,6 +24,18 @@ FORMAT: 1A
     }
 ```
 
+#### Description 
+
+* Can't find task
+
++ Responce 404 (Content-Type: application/json)
+
+        {
+            "message": "Todo not found."
+        }
+
+
+
 
 ### POST new todo task  [POST]
 #### Description  
@@ -50,6 +62,28 @@ FORMAT: 1A
             "content": "eat the lunch"
         }
         ```
+
+#### Description 
+* already task exists
++ Request (Content-Type: application/json)
+
+        {
+            "content": "duplicated title"
+        }  
+
++ Responce 400 (Content-Type: application/json)
+
+
+    + Headers
+
+            Location: /todos/{task}
+
+    + Body
+
+            {
+                "message": "the todo {title} already exists"
+            }
+
 
 ### DELETE todo task  [DELETE]
 #### Description  
