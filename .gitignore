@@ -1,2 +1,4 @@
 Pipfile.lock
 data.db
+.DS_Store
+.vscode

@@ -62,6 +62,15 @@ class TodoTest(BaseTest):
                 self.assertEqual(r.status_code, 200)
                 self.assertEqual(TodoModel.find_by_title('task1').content, 'walking')
 
+    def test_get_all_todo(self):
+        with self.app() as c:
+            with self.app_context():
+                TodoModel('task1',  'shopping').save_to_db()
+                r = c.get('/todos')
+
+                self.assertDictEqual(d1={'todos': [{'title': 'task1', 'content': 'shopping'}]},
+                                     d2=json.loads(r.data))
+
 
 
                 
